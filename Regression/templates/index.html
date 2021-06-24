@@ -1,0 +1,34 @@
+
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>  
+    <div class="container">
+    <form method="POST" class="form" enctype="multipart/form-data">  
+            {% csrf_token %}  
+            <div class="file-upload-wrapper">
+                <label>ファイルをアップロード
+                {{ form.test_x }}
+                </label>
+                <p id="p01">選択されていません</p>
+            </div>
+            <div class="wrapper">
+            <button type="submit" class="save btn btn-default" id="ans_list">推定</button>
+            </div>  
+    </form> 
+    </div> 
+    <script>
+            /* element */
+            var element = document.getElementById('id_test_x');
+            element.addEventListener('change', changeText);
+            /* function */
+            function changeText(){
+                var filename = element.files[0].name;
+                document.getElementById('p01').innerHTML = filename;
+            };
+    </script>
+</body> 
+
+</html>
