@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 import numpy as np
 import pandas as pd
-import sklearn
+import scikit-learn
 #from sklearn.model_selection import train_test_split
 #from sklearn.ensemble import RandomForestRegressor
 import pickle
