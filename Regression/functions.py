@@ -18,7 +18,7 @@ def process_files(test_x):
 
 
     #予測
-    rfr = pickle.load(open("rfr_model.sav", 'rb'))
+    rfr = pickle.load(open("/home/utsubasa/utsubasa.pythonanywhere.com/Regression/rfr_model.sav", 'rb'))
     #list_row = pickle.load(open("/Users/u_tsubasa/work/play/djangogirls/Regression/list.txt","rb"))
     #print(list_row)
     #y_pred = rfr.predict(X_valid)
